@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Project for SambaTech Software Engineering Selection</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="/css/main.css" rel="stylesheet"></link>  
+    <link href="/css/main2.css" rel="stylesheet"></link> 
+</head>
+<body>
+
+      <header id="header">
+        <nav>
+          <a href="#menu">Menu</a>
+        </nav>
+      </header>
+         
+      <!-- Banner -->
+      <section id="banner">
+        <div class="inner">
+          <h1> My personal decoder for playing non-web-supported videos </h1>
+        </div>
+        <video autoplay = 'true' loop='true' src="/images/banner.mp4"></video>
+      </section>
+
+      <br> </br>
+
+
+      <div class="body">
+        <div class="container">
+   <!--        <h1>My personal decoder for playing non-web-supported videos</h1>  -->
+          <div th:if="${message}">
+        		<h2 th:text="${message}"/>
+        	</div>
+
+        	<div>
+            <form id="setupform" method="POST" enctype="multipart/form-data" action="encode">
+                  Please, choose a video file to upload and convert to a web based format:
+              <table>
+                <tr><td><input type="file" name="file" /></td><td></td></tr>
+                <div id="loading2" style="display:none;"><img src="/images/loading.gif" alt="" /> Loading! </div>
+                <tr><td><input id="submit" type="submit" value="Click here to Upload !" /></td><td></td></tr>
+       
+<!--                <span class="no-display smallLoader"><img src="../static/images/loading.gif" /></span> -->
+                
+
+              </table>
+            </form>
+          </div>
+
+          <br> </br>
+            
+        </div>
+      </div>
+
+
+      <script type="text/javascript">
+      (function (d) {
+        d.getElementById('setupform').onsubmit = function () {
+          d.getElementById('submit').style.display = 'none';
+          d.getElementById('loading2').style.display = 'block';
+        };
+      }(document));
+      </script>
+
+
+
+      <!-- Footer -->
+      <footer id="footer">
+        <div class="inner">
+          <div class="content"></div>
+          <div class="copyright">
+            &copy; Raphael Luciano de Pontes
+          </div>
+        </div>
+      </footer>
+
+
+</body>
+</html>

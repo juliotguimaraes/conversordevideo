@@ -1,0 +1,35 @@
+/* Application-wide Styles */
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 200%;
+}
+h2, h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+  font-size: 150%;
+}
+body {
+  margin: 2em;
+  background-color: #9FE6FD;
+}
+body, input[text], button {
+  color: #888;
+  font-family: Cambria, Georgia;
+}
+.body {
+  display: flex;
+  justify-content: center;
+}
+.container {
+  width: 900px;
+  padding: 10px;
+  border: 1px solid #B2A8A8;
+}
+
+.italic {
+  font-style: italic;
+}
+/* everywhere else */
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}

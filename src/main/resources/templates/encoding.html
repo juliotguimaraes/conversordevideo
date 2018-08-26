@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="/css/main.css" rel="stylesheet"></link>
+    <link href="/css/main2.css" rel="stylesheet"></link>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="/js/encode.js" type="text/javascript" language="JavaScript"></script>
+</head>
+<body>
+
+      <header id="header">
+        <nav>
+          <a href="#menu">Menu</a>
+        </nav>
+      </header>
+
+      <!-- Banner -->
+      <section id="banner">
+        <div class="inner">
+          <h1> Done! Your video is ready to watch! </h1>
+        </div>
+        <video autoplay = 'true' loop='true' src="/images/banner.mp4"></video>
+      </section>
+
+      <br></br>
+
+      <div class="body">
+        <div class="container">
+          
+
+          <p class="input_id" th:text="${input_id}"/>
+          <p class="output_id" th:text="${output_id}"/>
+          <p class="output_url" th:text="${output_filename}"/>
+          <p class="zencoder_key" th:text="${zencoder_key}"/>
+
+
+          <div class="goback">
+        		<a href="/">If you faced problems, click here and try one more time, please!</a>
+        	</div>
+       
+          <br></br>
+       
+          <div class="watch">
+        		<a th:href="${output_link}">Click here to Watch it now!</a>
+        	</div>
+
+        </div>
+      </div>
+
+      <br></br>
+
+      <!-- Footer -->
+      <footer id="footer">
+        <div class="inner">
+          <div class="content"></div>
+          <div class="copyright">
+            &copy; Raphael Luciano de Pontes
+          </div>
+        </div>
+      </footer>
+
+
+</body>
+</html>

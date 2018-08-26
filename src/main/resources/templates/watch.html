@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="/css/main.css" rel="stylesheet"></link>
+    <link href="/css/main2.css" rel="stylesheet"></link>
+</head>
+<body>
+
+      <header id="header">
+        <nav>
+          <a href="#menu">Menu</a>
+        </nav>
+      </header>
+
+      <!-- Banner -->
+      <section id="banner">
+        <div class="inner">
+          <h2>Done! Just click on the button to play your decoded video! </h2>
+        </div>
+        <video autoplay = 'true' loop='true' src="/images/banner.mp4"></video>
+      </section>
+
+      <br></br>
+
+      <div class="body">
+        <div class="container">
+          <div th:if="${message}">
+        		<h2 th:text="${message}"/>
+        	</div>
+
+        	<div>
+              <video width="320" height="240" controls="controls" autoplay="autoplay">
+                <source th:src="${source}" type="video/webm" />
+              Your browser does not support the video tag.
+              </video>
+        	</div>
+          <div class="goback">
+        		<a href="/">Get me to the homepage</a>
+        	</div>
+
+        </div>
+      </div>
+
+      <br></br>
+
+      <!-- Footer -->
+      <footer id="footer">
+        <div class="inner">
+          <div class="content"></div>
+          <div class="copyright">
+            &copy; Raphael Luciano de Pontes
+          </div>
+        </div>
+      </footer>
+
+
+</body>
+</html>
