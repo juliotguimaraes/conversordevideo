@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Getting Started: Serving Web Content</title>
+    <title>Começando;</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link href="/css/main.css" rel="stylesheet"></link>
     <link href="/css/main2.css" rel="stylesheet"></link>
@@ -17,9 +17,9 @@
       <!-- Banner -->
       <section id="banner">
         <div class="inner">
-          <h2>Done! Just click on the button to play your decoded video! </h2>
+          <h2>Pronto, clique para assistir o video convertido! </h2>
         </div>
-        <video autoplay = 'true' loop='true' src="/images/banner.mp4"></video>
+        <video autoplay = 'true' loop='true' src="/images/imagem.gif"></video>
       </section>
 
       <br></br>
@@ -33,11 +33,11 @@
         	<div>
               <video width="320" height="240" controls="controls" autoplay="autoplay">
                 <source th:src="${source}" type="video/webm" />
-              Your browser does not support the video tag.
+             Seu browser nao suporta a tag do video.
               </video>
         	</div>
           <div class="goback">
-        		<a href="/">Get me to the homepage</a>
+        		<a href="/">Volte para a página inicial</a>
         	</div>
 
         </div>
@@ -50,7 +50,7 @@
         <div class="inner">
           <div class="content"></div>
           <div class="copyright">
-            &copy; Raphael Luciano de Pontes
+            &copy; Julio Cesar Tadeu Guimaraes
           </div>
         </div>
       </footer>
