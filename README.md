@@ -32,7 +32,7 @@ O aplicativo está hospedado na plataforma Heroku. O link para nosso aplicativo 
 https://videocvrt.herokuapp.com/
 
 * Amazon AWS-S3:
-O armazenamento sugerido foi os serviços de armazenamento da Amazon, projetados para oferecer mais de 99,9% de durabilidade e o serviço de armazenamento em nuvem mais suportado disponível. O AWS-S3 será responsável por armazenar o vídeo carregado (não baseado na Web) e, depois de convertê-lo em um formato baseado na Web, ele também será armazenado no AWS-S3. Devemos ter em mente que nosso plano é gratuito, portanto, a quantidade de dados será limitada, embora seja suficiente para os propósitos deste projeto.
+O armazenamento sugerido foi os serviços de armazenamento da Amazon. O AWS-S3 será responsável por armazenar o vídeo carregado (não baseado na Web) e, depois de convertê-lo em um formato baseado na Web, ele também será armazenado no AWS-S3. Devemos ter em mente que nosso plano é gratuito, portanto, a quantidade de dados será limitada, embora seja suficiente para os propósitos deste projeto.
 
 
 * Zencoder:
