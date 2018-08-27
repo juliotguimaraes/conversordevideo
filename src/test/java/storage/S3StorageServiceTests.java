@@ -34,10 +34,6 @@ public class S3StorageServiceTests {
         service.init();
     }
 
-
- 
-
-
     @Test
     public void testLoad() throws IOException {
         Resource file = service.loadVideo("test.txt", "test_input");
@@ -47,15 +43,6 @@ public class S3StorageServiceTests {
     }
 
 
-/*    @Test(expected = AmazonS3Exception.class)
-    public void testLoadWrongFile() throws IOException{
-        Resource file = service.load("test2.txt", "test_input");
-
-        InputStream output_stream = file.getInputStream();
-        String output = IOUtils.toString(output_stream, StandardCharsets.UTF_8);
-        System.out.println("\n\n\nValor Esperado TEST2.txt: (" + output + ")\n\n\n");
-
-    }*/
 
     @Test
     public void testsetKeyNull() throws IOException {
