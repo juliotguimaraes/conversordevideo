@@ -1,0 +1,12 @@
+webencoder/storage/S3StorageService.class
+webencoder/storage/StorageFileNotFoundException.class
+webencoder/encoding/ZencoderS3Service.class
+webencoder/Application.class
+webencoder/storage/StorageException.class
+webencoder/encoding/ZencoderProperties.class
+webencoder/storage/S3StorageProperties.class
+webencoder/storage/StorageProperties.class
+webencoder/controllers/MainController.class
+webencoder/encoding/EncodingService.class
+webencoder/encoding/EncodingException.class
+webencoder/storage/StorageService.class

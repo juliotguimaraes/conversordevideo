@@ -1,0 +1,12 @@
+/home/coxa/git/web-encoder/src/main/java/storage/StorageException.java
+/home/coxa/git/web-encoder/src/main/java/storage/StorageProperties.java
+/home/coxa/git/web-encoder/src/main/java/Application.java
+/home/coxa/git/web-encoder/src/main/java/storage/StorageFileNotFoundException.java
+/home/coxa/git/web-encoder/src/main/java/encoding/ZencoderProperties.java
+/home/coxa/git/web-encoder/src/main/java/encoding/ZencoderS3Service.java
+/home/coxa/git/web-encoder/src/main/java/storage/S3StorageProperties.java
+/home/coxa/git/web-encoder/src/main/java/storage/S3StorageService.java
+/home/coxa/git/web-encoder/src/main/java/encoding/EncodingException.java
+/home/coxa/git/web-encoder/src/main/java/storage/StorageService.java
+/home/coxa/git/web-encoder/src/main/java/controllers/MainController.java
+/home/coxa/git/web-encoder/src/main/java/encoding/EncodingService.java
