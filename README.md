@@ -62,7 +62,7 @@ mvn test;
 Em seguida, depois que o .jar foi construído, você poderá executá-lo localmente para testar a aplicação. Para fazer isso, digite em um terminal:
 
 *************
-java -jar target / videoconverter-0.1.0.jar;
+java -jar target/conversorvideo-0.1.0.jar;
 *************
 
 Em seguida, a aplicação web estará disponível em: http://localhost:8080.
@@ -70,4 +70,10 @@ Em seguida, a aplicação web estará disponível em: http://localhost:8080.
 Se você deseja implantar sua própria versão deste aplicativo em uma plataforma Heroku na nuvem, sinta-se à vontade para seguir as instruções em:
 
 https://devcenter.heroku.com/articles/deploying-java
+
+
+### Problema encontrados
+
+* A aplicação final não funciona como desejada, uma vez que o único problema que não consegui solucionar, foi a realização do upload do arquivo para a plataforma S3 da amazom.
+* A aplicação consegue pegar o arquivo da Amazon e enviar para o Zencoder para a codificação do video em um formato compatível e enviar esse novo vídeo para o S3 para que seja possível o stream.
 
