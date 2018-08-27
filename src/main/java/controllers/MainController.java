@@ -17,12 +17,12 @@ import conversorvideo.storage.StorageService;
 import conversorvideo.encoding.ConvertService;
 import org.json.JSONObject;
 
-/* The controller will take care of the routing pages.
+/* O controlador cuidará das páginas de roteamento.
 
-It provides the functionality of uploading through a POST request a
-file into the storage service, it initiates an encoding job with
-the encoding service and allows the user to watch a video from a url
-from the storage service.
+Ele fornece a funcionalidade de fazer upload por meio de uma solicitação POST
+arquivo no serviço de armazenamento, ele inicia um trabalho de codificação com
+o serviço de codificação e permite ao usuário assistir a um vídeo de um URL
+do serviço de armazenamento.
 */
 @Controller
 public class MainController {
@@ -36,44 +36,38 @@ public class MainController {
         this.encodingZenCoder = encodingZenCoder;
     }
 
-    /* Make sure the upload page will be reached if the user enter with simple '/' url */
+    /* Certifique-se de que a página de upload será alcançada se o usuário digitar com um simples URL '/' */
     @GetMapping("/")
     public String initialAccess() {
         return "redirect:/upload";
     }
 
-    /* Make sure the upload page will be reached if the user enter with simple '/' url */
-/*    @GetMapping("/error")
-    public String initial() {
-        return "redirect:/upload";
-    }*/
-
-
-    /* Regular upload page */ 
+    
+    /* Pagina de upload regular */ 
     @GetMapping("/upload")
     public String uploadFile() {
         return "upload";
     }
 
-    /* When the upload page has been called, handle the request to store on AWS-S3, and call the encoding view/page.  */
+    /* Quando a página de upload for chamada, manipule a solicitação para armazenar no AWS-S3 e chame a visualização / página de codificação. */
     @PostMapping("/encode")
     public String handleFileUpload(
         @RequestParam("file") MultipartFile file,
         Model model)
     {
         try {
-            /* Call function to Store the files passed on AWS-S3. */
+            /* Função de chamada para armazenar os arquivos transmitidos no AWS-S3. */
             storageAWSS3.storeFile(file, "input");
             String input_Name = file.getOriginalFilename();
             String output_Name = FilenameUtils.removeExtension(input_Name) + ".webm";
 
-            /* Handle the enconding process */
+            /* Lidar com o processo de codificação */
             String response = encodingZenCoder.encodeFile(
               input_Name, "input",
               output_Name, "output"
             );
 
-            /* Add the response attributes to our model. */
+            /* Adicione os atributos de resposta ao nosso modelo. */
             JSONObject response_JSON = new JSONObject(response);
             model.addAttribute("input_id", response_JSON.get("input_id"));
             model.addAttribute("output_id", response_JSON.get("output_id"));
@@ -86,7 +80,7 @@ public class MainController {
         }
     }
 
-    /* Call the watch view/page so the user can watch the video in web-based format. */
+    /* Chama para a view/page para que o usuário possa assistir ao vídeo em formato baseado na Web.*/
     @GetMapping("/watch/{fileName:.+}")
     public String watchFile(@PathVariable String fileName, Model model) {
         String link = storageAWSS3.returnPathAWSS3(fileName, "output");
