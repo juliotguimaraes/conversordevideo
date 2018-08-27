@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: conversorvideo.storage.S3StorageServiceTests
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.918 sec - in conversorvideo.storage.S3StorageServiceTests
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.909 sec - in conversorvideo.storage.S3StorageServiceTests
