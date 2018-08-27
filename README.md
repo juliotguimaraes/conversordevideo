@@ -2,6 +2,13 @@
 
 Projeto de seleção de novo funcionário, desenvolvendo um conversor de vídeo para a SambaTech.
 
+
+### Problema encontrados
+
+* A aplicação final não funciona como desejada, uma vez que o único problema que não consegui solucionar, foi a realização do upload do arquivo para a plataforma S3 da amazom.
+* A aplicação consegue pegar o arquivo da Amazon e enviar para o Zencoder para a codificação do video em um formato compatível e enviar esse novo vídeo para o S3 para que seja possível o stream.
+
+
 ### Projeto
 
 O desafio é desenvolver uma aplicação web que possibilita a conversão de vídeos de formatos especificos, que não são compativeis com a WEB, para um formato que seja compatível.
@@ -71,9 +78,4 @@ Se você deseja implantar sua própria versão deste aplicativo em uma plataform
 
 https://devcenter.heroku.com/articles/deploying-java
 
-
-### Problema encontrados
-
-* A aplicação final não funciona como desejada, uma vez que o único problema que não consegui solucionar, foi a realização do upload do arquivo para a plataforma S3 da amazom.
-* A aplicação consegue pegar o arquivo da Amazon e enviar para o Zencoder para a codificação do video em um formato compatível e enviar esse novo vídeo para o S3 para que seja possível o stream.
 
