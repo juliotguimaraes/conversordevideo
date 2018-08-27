@@ -1,4 +1,4 @@
-package videoconverter.encoding;
+package conversorvideo.encoding;
 
 /*
 Interface for the encoding service,

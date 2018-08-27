@@ -1,4 +1,4 @@
-package videoconverter.storage;
+package conversorvideo.storage;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 

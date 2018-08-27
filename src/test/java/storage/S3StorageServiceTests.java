@@ -1,4 +1,4 @@
-package webencoder.storage;
+package conversorvideo.storage;
 
 import java.util.Random;
 
@@ -27,8 +27,8 @@ public class S3StorageServiceTests {
     public void init() {
         properties.setLocation("https://s3.us-east-2.amazonaws.com");
         s3_properties.setBucketName("videocvrt");
-        s3_properties.setKey("AKIAJVZ66OCAR3EQAWWA");
-        s3_properties.setPrivateKey("U20yKUIqvspEcrzjNQl4/4dY2zV+xxdWspVm158D");
+        s3_properties.setKey(System.getenv("AWS_ACCESS_KEY_ID"));
+        s3_properties.setPrivateKey(System.getenv("AWS_SECRET_ACCESS_KEY"));
         s3_properties.setRegion("us-east-2");
         service = new S3StorageService(properties, s3_properties);
         service.init();
@@ -40,10 +40,9 @@ public class S3StorageServiceTests {
 
     @Test
     public void testLoad() throws IOException {
-        Resource file = service.load("test.txt", "test_input");
+        Resource file = service.loadVideo("test.txt", "test_input");
         InputStream output_stream = file.getInputStream();
         String output = IOUtils.toString(output_stream, StandardCharsets.UTF_8);
-        System.out.println("\n\n\nValor Esperado TEST1.txt: (" + output + ")\n\n\n");
         assertTrue("Output not equal to test file", output.equals("test_input"));
     }
 
@@ -66,7 +65,7 @@ public class S3StorageServiceTests {
 
     @Test
     public void testsetPrivateKeyNull() throws IOException {
-        s3_properties.setKey(System.getenv("AWS_SECRET_ACCESS_KEY"));
+        s3_properties.setPrivateKey(System.getenv("AWS_SECRET_ACCESS_KEY"));
         assertFalse("*** TEST SET SECRET_KEY != NULL FAIL *** Insted of getting from ENV var AWS_SECRET_ACCESS_KEY, private_key was assigned to null", s3_properties.getPrivateKey().equals(null));
     }
 
@@ -86,20 +85,18 @@ public class S3StorageServiceTests {
 
     @Test
     public void testPath() {
-        System.out.println("KEY:");
-        System.out.println(s3_properties.getKey());
 
-        String path = service.path("sample.dv", "test_input");
+        String path = service.returnPathAWSS3("sample.dv", "test_input");
         assertEquals(path, "https://s3.us-east-2.amazonaws.com/videocvrt/test_input/sample.dv");
     }
-
+/*
         @Test
     public void testStore() {
       MockMultipartFile mockMultipartFile = new MockMultipartFile(
        "test.txt",                //filename
        "test_input".getBytes()); //content
-       service.store(mockMultipartFile, "test_ouput");    
+       service.storeFile(mockMultipartFile, "test_ouput");    
     }
-
+*/
 
 }

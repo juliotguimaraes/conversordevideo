@@ -1,4 +1,4 @@
-package videoconverter.storage;
+package conversorvideo.storage;
 
 public class StorageException extends RuntimeException {
 

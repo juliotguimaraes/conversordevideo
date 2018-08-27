@@ -1,4 +1,4 @@
-package videoconverter.controllers;
+package conversorvideo.controllers;
 
 import org.apache.commons.io.FilenameUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,9 +12,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.view.RedirectView;
-import videoconverter.storage.StorageFileNotFoundException;
-import videoconverter.storage.StorageService;
-import videoconverter.encoding.ConvertService;
+import conversorvideo.storage.StorageFileNotFoundException;
+import conversorvideo.storage.StorageService;
+import conversorvideo.encoding.ConvertService;
 import org.json.JSONObject;
 
 /* The controller will take care of the routing pages.

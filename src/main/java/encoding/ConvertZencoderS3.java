@@ -1,4 +1,4 @@
-package videoconverter.encoding;
+package conversorvideo.encoding;
 
 import java.io.DataOutputStream;
 import java.io.InputStreamReader;
@@ -12,10 +12,10 @@ import org.json.JSONArray;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.stereotype.Service;
-import videoconverter.Application;
-import videoconverter.encoding.ConvertException;
-import videoconverter.encoding.ConvertProperties;
-import videoconverter.storage.S3StorageProperties;
+import conversorvideo.Application;
+import conversorvideo.encoding.ConvertException;
+import conversorvideo.encoding.ConvertProperties;
+import conversorvideo.storage.S3StorageProperties;
 
 /*
 Class that provides the encoding service using Zencoder and S3.

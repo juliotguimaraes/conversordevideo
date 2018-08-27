@@ -1,4 +1,4 @@
-package videoconverter.encoding;
+package conversorvideo.encoding;
 
 public class ConvertException extends RuntimeException {
 

@@ -1,2 +1,2 @@
-webencoder/storage/S3StorageServiceTests.class
-webencoder/encoding/ZencoderS3ServiceTests.class
+conversorvideo/encoding/ZencoderS3ServiceTests.class
+conversorvideo/storage/S3StorageServiceTests.class

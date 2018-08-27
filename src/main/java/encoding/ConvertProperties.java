@@ -1,4 +1,4 @@
-package videoconverter.encoding;
+package conversorvideo.encoding;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
@@ -14,9 +14,9 @@ Lastly, the Zencoder job url from Zencoder API.
 @ConfigurationProperties("encoding.zencoder")
 public class ConvertProperties {
 
-  private String full_key = "unknown";
-  private String read_key = "unknown";
-  private String zencoder_job_url = "unknown";
+  private String full_key = "4e50c38f9c9b1d7724e4296b775b2ce5";
+  private String read_key = "5deca53e10a60d64ae22ba0ecfac49f8";
+  private String zencoder_job_url = "https://app.zencoder.com/api/v2/jobs";
 
   public String getConvertUrl() {
     return this.zencoder_job_url;

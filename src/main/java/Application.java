@@ -1,4 +1,4 @@
-package videoconverter;
+package conversorvideo;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -8,8 +8,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 
-import videoconverter.storage.StorageProperties;
-import videoconverter.storage.StorageService;
+import conversorvideo.storage.StorageProperties;
+import conversorvideo.storage.StorageService;
 
 /*
 Main application file.

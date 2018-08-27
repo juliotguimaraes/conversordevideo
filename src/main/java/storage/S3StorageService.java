@@ -1,4 +1,4 @@
-package videoconverter.storage;
+package conversorvideo.storage;
 
 import java.io.IOException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,8 +17,8 @@ import com.amazonaws.services.s3.model.PutObjectRequest;
 import com.amazonaws.services.s3.model.S3Object;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import com.amazonaws.services.s3.model.S3ObjectInputStream;
-import videoconverter.storage.S3StorageProperties;
-import videoconverter.Application;
+import conversorvideo.storage.S3StorageProperties;
+import conversorvideo.Application;
 
 /*
 Storage service that uses Amazon's S3 as a storage medium.
