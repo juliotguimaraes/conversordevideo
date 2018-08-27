@@ -3,13 +3,13 @@ package conversorvideo.encoding;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 /*
-Properties for the Zencoder service.
+Propriedades para o serviço Zencoder.
 
-It stores the Zencoder full access key, used within the Application
-to create encoding jobs.
-The Zencoder read key, to be passed to the font end in order to monitor
-encoding progress.
-Lastly, the Zencoder job url from Zencoder API.
+Ele armazena a chave de acesso completo do Zencoder, usada dentro do Aplicativo
+para criar trabalhos de codificação.
+A tecla de leitura do Zencoder, a ser passada para o final da fonte para monitorar
+progresso de codificação.
+Por fim, o URL de trabalho do Zencoder da API do Zencoder.
 */
 @ConfigurationProperties("encoding.zencoder")
 public class ConvertProperties {

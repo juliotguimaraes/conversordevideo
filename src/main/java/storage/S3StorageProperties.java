@@ -3,10 +3,10 @@ package conversorvideo.storage;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 /*
-Properties for the S3 storage service.
+Propriedades para o serviço de armazenamento do S3.
 
-It stores the S3 bucket name, as well the public and private key for
-accessing S3 and the region selected for the bucket.
+Ele armazena o nome do bucket S3, bem como a chave pública e privada para
+acessando S3 e a região selecionada para o bucket.
 */
 @ConfigurationProperties("storage.s3")
 public class S3StorageProperties {

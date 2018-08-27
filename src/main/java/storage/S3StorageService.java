@@ -21,11 +21,11 @@ import conversorvideo.storage.S3StorageProperties;
 import conversorvideo.Application;
 
 /*
-Storage service that uses Amazon's S3 as a storage medium.
+Serviço de armazenamento que usa o S3 da Amazon como meio de armazenamento.
 
-It implements all StorageService interface using only S3, inserting and
-reading from it. It uses ConfigurationProperties to store sensitive information
-like access key and bucket region.
+Ele implementa toda a interface StorageService usando apenas S3, inserindo e
+lendo a partir dele. Ele usa ConfigurationProperties para armazenar informações confidenciais
+como chave de acesso e região do bucket.
 */
 @Service
 @EnableConfigurationProperties(S3StorageProperties.class)
@@ -36,9 +36,9 @@ public class S3StorageService implements StorageService {
 	private final S3StorageProperties s3SProp;
 
     /*
-    Class constructor.
+    Construtor de classe.
 
-    It sets up the amazon s3 client for further uinterface calls.
+     Configura o cliente amazon s3 para mais chamadas de interface.
     */
     @Autowired
     public S3StorageService(StorageProperties properties, S3StorageProperties s3Prop) {
@@ -49,20 +49,20 @@ public class S3StorageService implements StorageService {
                     this.s3SProp.getKey(),
                     this.s3SProp.getPrivateKey());
 
-        // create a client connection based on credentials
+        // criar uma conexão de cliente com base em credenciais
         this.s3client = new AmazonS3Client(credentials);
     }
 
     /*
-    This storage service does not require initial computation.
+    Este serviço de armazenamento não requer computação inicial.
     */
     @Override
     public void init() {}
 
     /*
-    Store the MultipartFile file into Amazon's S3 storage.
+    Armazene o arquivo MultipartFile no armazenamento S3 da Amazon.
 
-    It uses path to resolve the file's folder inside S3
+     Ele usa o caminho para resolver a pasta do arquivo dentro do S3
     */
     @Override
     public void storeFile(MultipartFile file, String path) {
@@ -72,7 +72,7 @@ public class S3StorageService implements StorageService {
                 throw new StorageException("Failed to store empty file " + filename);
             }
             if (filename.contains("..")) {
-                // This is a security check
+                // Esta é uma verificação de segurança
                 throw new StorageException(
                         "Cannot store file with relative path outside current directory "
                                 + filename);
@@ -92,7 +92,7 @@ public class S3StorageService implements StorageService {
     }
 
     /*
-    Load and returns as resource the file within the path folder in S3.
+    Carregue e retorne como recurso o arquivo dentro da pasta do caminho no S3.
     */
     @Override
     public Resource loadVideo(String filename, String path) {
@@ -114,7 +114,7 @@ public class S3StorageService implements StorageService {
 
     @Override
     /*
-    Return S3 path for the file name and path received.
+  Retorna o caminho S3 para o nome do arquivo e o caminho recebido.
     */
     public String returnPathAWSS3(String filename, String local_path) {
         String root_location = this.SProp.getLocation();

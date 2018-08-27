@@ -7,13 +7,13 @@ import java.nio.file.Path;
 import java.util.stream.Stream;
 
 /*
-Interface for the storage service,
+Interface para o serviço de armazenamento,
 
-This interface declares functions necessary for a storage service.
-Such service should be able to, from a MultipartFile file,
-store the whole file in it's storage medium.
-It should be able to load a file and return a file's path inside the
-storage medium.
+Essa interface declara funções necessárias para um serviço de armazenamento.
+Esse serviço deve poder, a partir de um arquivo MultipartFile,
+armazene o arquivo inteiro em seu meio de armazenamento.
+Ele deve ser capaz de carregar um arquivo e retornar o caminho de um arquivo dentro do
+meio de armazenamento.
 */
 public interface StorageService {
 

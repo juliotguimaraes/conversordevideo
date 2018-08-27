@@ -1,12 +1,13 @@
 package conversorvideo.encoding;
 
 /*
-Interface for the encoding service,
+Interface para o serviço de codificação,
 
-This interface declares functions necessary for an encoding service.
-Such service should be able to, from one file, create an encoded version
-of it in a specified path with a defined name.
+Essa interface declara funções necessárias para um serviço de codificação.
+Esse serviço deve poder, a partir de um arquivo, criar uma versão codificada
+dele em um caminho especificado com um nome definido.
 */
+
 public interface ConvertService {
 
     void init();

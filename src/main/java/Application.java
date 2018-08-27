@@ -12,9 +12,9 @@ import conversorvideo.storage.StorageProperties;
 import conversorvideo.storage.StorageService;
 
 /*
-Main application file.
+Arquivo de aplicação principal.
 
-It runs the application and cunstructs the Logger.
+Ele executa a aplicação e cria o Logger.
 */
 @SpringBootApplication
 @EnableConfigurationProperties(StorageProperties.class)

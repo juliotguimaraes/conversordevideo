@@ -18,12 +18,12 @@ import conversorvideo.encoding.ConvertProperties;
 import conversorvideo.storage.S3StorageProperties;
 
 /*
-Class that provides the encoding service using Zencoder and S3.
+Classe que fornece o serviço de codificação usando Zencoder e S3.
 
-Its encoding uses a file present in S3 and commands Zencoder to store
-the encoded file in S3 as well.
+Sua codificação usa um arquivo presente no S3 e comanda o Zencoder para armazenar
+o arquivo codificado no S3 também.
 
-It uses ConfigurationProperties to store data like keys and S3 information.
+Ele usa ConfigurationProperties para armazenar dados como chaves e informações S3.
 */
 @Service
 @EnableConfigurationProperties(ConvertProperties.class)
